@@ -1,0 +1,36 @@
+/*ID: muhamma28
+TASK: ride
+LANG: C++
+*/
+/* LANG can be C++11 or C++14 for those more recent releases */
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    freopen ("ride.in","r",stdin);
+ freopen ("ride.out","w",stdout);
+ string comet,ufo;
+    cin>>comet;
+    cin>>ufo;
+    int l_comet = comet.length();
+    int l_ufo = ufo.length();
+    int comet_number=1,ufo_number=1;
+    for(int i=0; i<l_comet; i++){
+        comet_number*= int(comet[i])-64;
+    }
+    //cout<<comet_number<<endl;
+    for(int i=0; i<l_ufo; i++){
+        ufo_number*= int(ufo[i])-64;
+    }
+    //cout<<ufo_number<<endl;
+
+    if(comet_number%47 == ufo_number%47)
+        cout<<"GO"<<endl;
+  else
+        cout<<"STAY"<<endl;
+
+
+}
